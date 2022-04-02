@@ -1,0 +1,26 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "This is node js learning series",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhinav3254/node-js.git"
+  },
+  "keywords": [
+    "abhinav"
+  ],
+  "author": "abhinav Jha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhinav3254/node-js/issues"
+  },
+  "homepage": "https://github.com/abhinav3254/node-js#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "simple-node-logger": "^21.8.12"
+  }
+}
