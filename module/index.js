@@ -12,3 +12,9 @@ FileSystem.writeFileSync("hello.txt","Hii this is the tutorial of node js which 
 
 
 FileSystem.writeFileSync("hello2.txt","node js is an backend tool it is not an programming language");
+
+console.log("directory name is ------>> ",__dirname);
+// This function returns the directory name
+
+console.log("Print the file name with directory",__filename);
+// This function return the file name
