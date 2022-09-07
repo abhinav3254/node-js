@@ -10,3 +10,6 @@
 		Date of creation :- 07-09-2022
 		07 SEPTEMBER 2022
 		TIME : - 19:45pm
+
+		# pcakage.json --> it will have our project details
+		# package-lock.json --> it will have the details of the package or dependicies.
