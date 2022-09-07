@@ -1,0 +1,23 @@
+{
+  "name": "all_about_package.json",
+  "version": "1.0.0",
+  "description": "This is the information about pacakge.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhinav3254/node-js.git"
+  },
+  "keywords": [
+    "abhinav",
+    "jha"
+  ],
+  "author": "Abhinav Jha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhinav3254/node-js/issues"
+  },
+  "homepage": "https://github.com/abhinav3254/node-js#readme"
+}
