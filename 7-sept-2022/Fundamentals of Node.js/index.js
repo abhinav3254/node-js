@@ -1,4 +1,4 @@
-var x = 10;
+hanvar x = 10;
 let y = 50;
 const z = 99;
 
@@ -9,6 +9,11 @@ y = 1212;
 // Here we can't reassign the value in the const type of variables.
 
 
-console.log(x+y+z);
+
+console.log(x + y + z);
 
 console.log(x);
+
+if (x == 2929) {
+    console.log('matched');
+}
