@@ -10,6 +10,10 @@
 module.exports = {
 
     x: 1020304050,
-    y: 209999999
+    y: 209999999,
 
+    // we can also make function in this module
+    z: function () {
+        return 41;
+    }
 }
