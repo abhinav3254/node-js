@@ -1,4 +1,4 @@
-hanvar x = 10;
+var x = 10;
 let y = 50;
 const z = 99;
 
