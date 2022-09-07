@@ -33,3 +33,11 @@ const arr = [2, 4, 3, 8, 7, 1, 5, 9, 6, 10];
 console.log(arr);
 
 console.log(arr[0]);
+
+// we will import x and y value from the app.js
+
+
+const app = require('./app');
+console.log("x value is" + app.x);
+
+console.log("y value is " + app.y);
