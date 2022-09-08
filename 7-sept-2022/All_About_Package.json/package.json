@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/abhinav3254/node-js/issues"
   },
-  "homepage": "https://github.com/abhinav3254/node-js#readme"
+  "homepage": "https://github.com/abhinav3254/node-js#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "simple-node-logger": "^21.8.12"
+  }
 }
