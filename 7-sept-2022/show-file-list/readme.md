@@ -4,7 +4,7 @@ Time of creation :- 09:21 am.
 
 Topics to be covered 
 
-1. make files in a folder
+1. make files in a folder using command line/terminal
 2. use path module
 3. get file name and print
 4. interview question
