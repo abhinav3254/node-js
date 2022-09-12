@@ -27,4 +27,39 @@ for(i = 0;i < 5 ;i++) {
 
 }
 
-// Time where I Have stopped 02:03:36
+// Now we are going to read the file
+
+fs.readdir(dirPath,(error,files) => {
+    console.warn(files);
+});
+
+/*
+    We got output as an array
+
+    [
+  'hello0.txt',
+  'hello1.txt',
+  'hello2.txt',
+  'hello3.txt',
+  'hello4.txt'
+]
+*/
+
+// What if we want single single then
+fs.readdir(dirPath,(error,files)=> {
+    files.forEach((item)=>{
+        console.log("file name is"+item)
+    });
+});
+/**
+ * 
+ * output is as follow
+ * 
+ * file name ishello0.txt
+file name ishello1.txt
+file name ishello2.txt
+file name ishello3.txt
+file name ishello4.txt
+
+ * 
+ */
