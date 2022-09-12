@@ -31,3 +31,5 @@ setTimeout(() => {
 console.log(x+y);
 
 // Output of this code is 20
+
+// This is the drwaback of the node.js that it will print 20 instead of 120 because it was not able to update th value.
