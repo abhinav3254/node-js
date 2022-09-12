@@ -1,20 +1,33 @@
-console.log('Start Execution');
+// console.log('Start Execution');
 
 
-// Stoping the thread
+// // Stoping the thread
+// setTimeout(() => {
+//     console.log('Logic Execution');
+// }, 2000);
+// // setTimeout makes the thread sleep for few seconds
+
+// console.log('Complete Execution');
+
+// /*
+// This is the output that we got and this shows node.js is a async language
+
+// Start Execution
+// Complete Execution
+// Logic Execution
+
+
+// */
+
+// Another examples
+
+let x = 20;
+let y = 0;
+
 setTimeout(() => {
-    console.log('Logic Execution');
+    y = 100;
 }, 2000);
-// setTimeout makes the thread sleep for few seconds
 
-console.log('Complete Execution');
+console.log(x+y);
 
-/*
-This is the output that we got and this shows node.js is a async language
-
-Start Execution
-Complete Execution
-Logic Execution
-
-
-*/
+// Output of this code is 20
