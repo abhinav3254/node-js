@@ -7,3 +7,5 @@ Make HTML Pages
 
 Time stamp:-03:15:01
 Date of creation :- 14 sept 2022 and time is 09:52 am.
+
+Important thing :- to access any website please use home.html instead of home only
