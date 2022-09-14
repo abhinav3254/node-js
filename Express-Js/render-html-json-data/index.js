@@ -12,4 +12,11 @@ app.get('/about',(req,res)=>{
     `);
 });
 
+app.get('/help',(req,res)=>{
+    res.send({
+        name:'abhinav',
+        email:'abhinav@gmail.com'
+    });
+});
+
 app.listen(4500);
