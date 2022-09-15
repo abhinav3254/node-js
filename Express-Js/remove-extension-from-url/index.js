@@ -16,6 +16,10 @@ app.get('/contact',(req,res)=>{
     res.sendFile(`${__dirname}/contact.html`);
 });
 
+app.get('*',(req,res)=>{
+    res.sendFile(`${__dirname}/404.html`);
+});
+
 
 
 app.listen(4500);
