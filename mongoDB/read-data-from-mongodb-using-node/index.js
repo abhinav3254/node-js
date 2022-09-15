@@ -14,12 +14,22 @@ const client = new MongoClient(url);
 
 
 // To find a specific result from the database
-async function getData() {
+async function dbConnect() {
     let result = await client.connect();
     let db = result.db(database);
-    let collection = db.collection('products');
-    let response = await collection.find({model:'k2'}).toArray();
-    console.log(response);
+    // let collection = db.collection('products');
+    return db.collection('products');
+    // let response = await collection.find({model:'k2'}).toArray();
+    // console.log(response);
 }
 
-getData();
+
+// One way of handling promise in node-js
+
+dbConnect().then((res)=>{
+    // console.warn(res.find().toArray())
+    res.find({}).toArray().then((data)=>{
+        console.warn(data);
+    })
+})
+console.log(dbConnect());
