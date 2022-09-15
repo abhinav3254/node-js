@@ -25,6 +25,8 @@ app.get('/about',(req,res)=>{
     res.send('<h1>This is about page</h1>');
 });
 
+app.use('/',route);
+
 
 // similarly we can apply route level middleware in two routes
 
