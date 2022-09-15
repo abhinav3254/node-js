@@ -1,25 +1,14 @@
-const {MongoClient} = require('mongodb');
-const url = 'mongodb://localhost:27017'
-const database = 'e-comm';
 
-const client = new MongoClient(url);
-
-// async function getData() {
-//     let result = await client.connect();
-//     let db = result.db(database);
-//     let collection = db.collection('products');
-//     let response = await collection.find({}).toArray();
-//     console.log(response);
-// }
+const db = require('./mongodb');    
+// const db = require('../mongodb'); //on the global level   
 
 
-// To find a specific result from the database
-async function getData() {
-    let result = await client.connect();
-    let db = result.db(database);
-    let collection = db.collection('products');
-    let response = await collection.find({model:'k2'}).toArray();
-    console.log(response);
+// Easy and 2nd way to handle async
+const main = async () => {
+    // console.log("main function called");
+    let data = await dbConnect();
+    data = await data.find().toArray();
+    console.warn(data);
 }
-
-getData();
+// console.log(dbConnect());
+main();
