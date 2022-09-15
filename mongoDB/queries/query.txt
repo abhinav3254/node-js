@@ -1,0 +1,38 @@
+# to create the databse
+use database_name
+
+# to see databases
+show dbs
+
+# create a collection inside mongo db
+db.createCollection('collection_name')
+
+# to see collections
+show collections
+
+# if we have many collections and we have to delete specific collection then code for that is :-
+db.collection_name.drop()
+
+# delete databse
+db.dropDatabase()
+
+# CRUD
+
+# Insert data into the database
+db.collection_name.insertOne({
+    name:'xxxxx',
+    brand:'samsung',
+    price : 45000,
+    category : 'mobile'
+})
+
+# how to check the data or Read data
+
+db.collection_name.find()
+
+# Update data
+we have to update brand of the phone 
+db.collection_name.updateOne({name:"xxxxx"},{$set:{brand:"oppo"}})
+
+#delete data 
+db.collection_name.deleteOne({brand:"samsung"})
