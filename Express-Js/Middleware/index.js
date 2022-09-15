@@ -2,10 +2,11 @@ const express = require('express');
 const app = express();
 
 // Making a middleware
-const reqFilter = (req,res,next)=>{
-    console.log('reqFilter');
-    next();
-}
+// const reqFilter = (req,res,next)=>{
+//     console.log('reqFilter');
+//     next();
+// }
+
 
 app.use(reqFilter);
 
