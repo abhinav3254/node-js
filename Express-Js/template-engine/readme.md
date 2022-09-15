@@ -12,3 +12,4 @@ Contents
 5. Interview Questions
 
 Ans 1. -> Used to create dynamic pages and we have to install them.
+Ans 2. -> ejs in most popular
