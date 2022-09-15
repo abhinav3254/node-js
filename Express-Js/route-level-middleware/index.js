@@ -11,13 +11,14 @@ const reqFilter = (req,res,next) => {
     }
 }
 
-app.use(reqFilter);
+// app.use(reqFilter);
 
 app.get('/',(req,res)=>{
     res.send('<h1>This is home page</h1>');
 });
 
-app.get('/users',(req,res)=>{
+// adding middleware here in /users route
+app.get('/users',reqFilter,(req,res)=>{
     res.send('<h1>This is users page</h1>');
 });
 
