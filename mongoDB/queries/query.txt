@@ -36,3 +36,209 @@ db.collection_name.updateOne({name:"xxxxx"},{$set:{brand:"oppo"}})
 
 #delete data 
 db.collection_name.deleteOne({brand:"samsung"})
+
+
+
+
+This is done by me in terminal
+
+test> use e-comm
+switched to db e-comm
+e-comm> db.createCollection('products')
+{ ok: 1 }
+e-comm> db.pro
+db.propertyIsEnumerable  db.products
+
+e-comm> db.products.insertOne({name:'samsung',price:4500,model:'f02s',category:'mobile'})
+{
+  acknowledged: true,
+  insertedId: ObjectId("6323057cd1debe46fad602d8")
+}
+e-comm> db.products.find()
+[
+  {
+    _id: ObjectId("6323057cd1debe46fad602d8"),
+    name: 'samsung',
+    price: 4500,
+    model: 'f02s',
+    category: 'mobile'
+  }
+]
+e-comm> db.products.insertOne({name:'i-phone',price:9500,model:'10 max pro',category:'mobile'})
+{
+  acknowledged: true,
+  insertedId: ObjectId("632305a5d1debe46fad602d9")
+}
+e-comm> db.products.insertOne({name:'i-phone',price:6500,model:'10 max',category:'mobile'})
+{
+  acknowledged: true,
+  insertedId: ObjectId("632305b9d1debe46fad602da")
+}
+e-comm> db.products.insertOne({name:'vivo',price:1000,model:'y115l',category:'mobile'})
+{
+  acknowledged: true,
+  insertedId: ObjectId("632305fed1debe46fad602db")
+}
+e-comm> db.products.find()
+[
+  {
+    _id: ObjectId("6323057cd1debe46fad602d8"),
+    name: 'samsung',
+    price: 4500,
+    model: 'f02s',
+    category: 'mobile'
+  },
+  {
+    _id: ObjectId("632305a5d1debe46fad602d9"),
+    name: 'i-phone',
+    price: 9500,
+    model: '10 max pro',
+    category: 'mobile'
+  },
+  {
+    _id: ObjectId("632305b9d1debe46fad602da"),
+    name: 'i-phone',
+    price: 6500,
+    model: '10 max',
+    category: 'mobile'
+  },
+  {
+    _id: ObjectId("632305fed1debe46fad602db"),
+    name: 'vivo',
+    price: 1000,
+    model: 'y115l',
+    category: 'mobile'
+  }
+]
+e-comm> db.products.insertOne({name:'nokia',price:'5000',model:'3.1+',category:'mobile'})
+{
+  acknowledged: true,
+  insertedId: ObjectId("63230653d1debe46fad602dc")
+}
+e-comm> db.products.find()
+[
+  {
+    _id: ObjectId("6323057cd1debe46fad602d8"),
+    name: 'samsung',
+    price: 4500,
+    model: 'f02s',
+    category: 'mobile'
+  },
+  {
+    _id: ObjectId("632305a5d1debe46fad602d9"),
+    name: 'i-phone',
+    price: 9500,
+    model: '10 max pro',
+    category: 'mobile'
+  },
+  {
+    _id: ObjectId("632305b9d1debe46fad602da"),
+    name: 'i-phone',
+    price: 6500,
+    model: '10 max',
+    category: 'mobile'
+  },
+  {
+    _id: ObjectId("632305fed1debe46fad602db"),
+    name: 'vivo',
+    price: 1000,
+    model: 'y115l',
+    category: 'mobile'
+  },
+  {
+    _id: ObjectId("63230653d1debe46fad602dc"),
+    name: 'nokia',
+    price: '5000',
+    model: '3.1+',
+    category: 'mobile'
+  }
+]
+e-comm> db.products.update
+db.products.updateMany  db.products.updateOne
+
+e-comm> db.products.updateOne({name:'nokia'},{$set:{price:999999999}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+e-comm> db.products.find()
+[
+  {
+    _id: ObjectId("6323057cd1debe46fad602d8"),
+    name: 'samsung',
+    price: 4500,
+    model: 'f02s',
+    category: 'mobile'
+  },
+  {
+    _id: ObjectId("632305a5d1debe46fad602d9"),
+    name: 'i-phone',
+    price: 9500,
+    model: '10 max pro',
+    category: 'mobile'
+  },
+  {
+    _id: ObjectId("632305b9d1debe46fad602da"),
+    name: 'i-phone',
+    price: 6500,
+    model: '10 max',
+    category: 'mobile'
+  },
+  {
+    _id: ObjectId("632305fed1debe46fad602db"),
+    name: 'vivo',
+    price: 1000,
+    model: 'y115l',
+    category: 'mobile'
+  },
+  {
+    _id: ObjectId("63230653d1debe46fad602dc"),
+    name: 'nokia',
+    price: 999999999,
+    model: '3.1+',
+    category: 'mobile'
+  }
+]
+e-comm> db.pro
+db.propertyIsEnumerable  db.products
+
+e-comm> db.products
+e-comm.products
+e-comm> db.products.deleteOne({model:'10 max'})
+{ acknowledged: true, deletedCount: 1 }
+e-comm> db.products.find()
+[
+  {
+    _id: ObjectId("6323057cd1debe46fad602d8"),
+    name: 'samsung',
+    price: 4500,
+    model: 'f02s',
+    category: 'mobile'
+  },
+  {
+    _id: ObjectId("632305a5d1debe46fad602d9"),
+    name: 'i-phone',
+    price: 9500,
+    model: '10 max pro',
+    category: 'mobile'
+  },
+  {
+    _id: ObjectId("632305fed1debe46fad602db"),
+    name: 'vivo',
+    price: 1000,
+    model: 'y115l',
+    category: 'mobile'
+  },
+  {
+    _id: ObjectId("63230653d1debe46fad602dc"),
+    name: 'nokia',
+    price: 999999999,
+    model: '3.1+',
+    category: 'mobile'
+  }
+]
+e-comm> db.products.find()
+
