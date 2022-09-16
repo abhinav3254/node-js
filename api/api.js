@@ -3,6 +3,8 @@ const dbConnect = require('./mongodb');
 
 const app = express();
 
+// get method
+
 app.get('/', async (req, res) => {
     let data = await dbConnect();
     data = await data.find().toArray();
