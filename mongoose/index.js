@@ -5,11 +5,12 @@ const main = async () => {
     await mongoose.connect(url);
     // making schema
     const productSchema = new mongoose.Schema({
-        name: String
+        name: String,
+        price: Number
     });
 
     const productsModel = mongoose.model('products', productSchema);
-    let data = new productsModel({ name: 'm9', price: 5500 });
+    let data = new productsModel({ name: 'm 10', price: 5500 });
     let result = await data.save();
     console.log(result);
 };
