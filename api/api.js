@@ -3,6 +3,7 @@ const dbConnect = require('./mongodb');
 
 const app = express();
 
+// used to get body from the request
 app.use(express.json());
 
 // get method
@@ -25,6 +26,19 @@ app.post('/', async (req, res) => {
 
 });
 
+
+// put method
+// put method is used to update the API
+
+app.put('/:name', async (req, res) => {
+    console.log(req.body);
+    let data = await dbConnect();
+    let result = await data.updateOne(
+        { name: req.params.name },
+        { $set: req.body }
+    );
+    res.send({ result: 'update' });
+});
 
 
 app.listen(4500);
