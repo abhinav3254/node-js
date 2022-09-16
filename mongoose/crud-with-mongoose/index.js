@@ -46,6 +46,28 @@ const updateInDb = async () => {
 
 };
 
-updateInDb();
+const deleteInDb = async () => {
+    await mongoose.connect(url);
+    const productsModel = mongoose.model('products', productSchema);
+    let data = await productsModel.deleteOne({ name: 'm 10' });
+
+    console.log(data);
+
+};
+
+const findInDb = async () => {
+    await mongoose.connect(url);
+    const productsModel = mongoose.model('products', productSchema);
+    let data = await productsModel.find({ name: 'samsung', model: 'm 14' });
+
+    console.log(data);
+
+};
+
+findInDb();
+
+// deleteInDb();
+
+// updateInDb();
 
 // saveInDB();
