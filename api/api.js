@@ -3,6 +3,7 @@ const dbConnect = require('./mongodb');
 
 const app = express();
 
+// used to get body from the request
 app.use(express.json());
 
 // get method
