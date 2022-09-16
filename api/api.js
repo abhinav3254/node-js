@@ -27,5 +27,18 @@ app.post('/', async (req, res) => {
 });
 
 
+// put method
+// put method is used to update the API
+
+app.put('/', async (req, res) => {
+    console.log(req.body);
+    let data = await dbConnect();
+    let result = await data.updateOne(
+        { 'roll_no': req.body.roll_no },
+        { $set: req.body }
+    );
+    res.send({ result: 'update' });
+});
+
 
 app.listen(4500);
