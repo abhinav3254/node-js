@@ -24,6 +24,29 @@ app.post('/', async (req, res) => {
     res.send(result);
 })
 
+// PUT request
+
+// :model refers to what we want to update
+app.put('/:model', async (req, res) => {
+    console.log(req.body)
+    let data = await dbConnect();
+    // static way
+
+    // let result = data.updateOne(
+    //     { model: 'a7' },
+    //     { $set: { price: '$150' } }
+    // );
+
+    // dynamic way
+
+    let result = data.updateOne(
+        { model: req.params.model },
+        { $set: req.body }
+    );
+
+    res.send('price updated');
+})
+
 app.listen(4500);
 
 // Time stamp in the video is : - 06:07:03
