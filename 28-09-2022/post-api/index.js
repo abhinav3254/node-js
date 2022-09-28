@@ -1,6 +1,8 @@
 const express = require('express');
 const dbConnect = require('./mongodb');
 
+const mongodb = require('mongodb');
+
 const app = express();
 
 
@@ -47,6 +49,15 @@ app.put('/:model', async (req, res) => {
     res.send('price updated');
 })
 
+// Delete request
+
+app.delete('/:id', async (req, res) => {
+    let data = await dbConnect();
+    let result = await data.deleteOne({ _id: new mongodb.ObjectId(req.params.id) });
+    res.send(result);
+
+})
+
 app.listen(4500);
 
-// Time stamp in the video is : - 06:07:03
+// Time stamp in the video is : - 06:23:20
