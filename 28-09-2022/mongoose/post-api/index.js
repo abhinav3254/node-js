@@ -44,6 +44,27 @@ app.delete('/delete/:price', async (req, res) => {
     // res.send('done');
 });
 
+// Search API
+
+app.get('/search/:key', async (req, res) => {
+
+    console.log(req.params.key)
+
+    let data = await product.find(
+        {
+            "$or": [
+                { "name": { $regex: req.params.key } },
+                { "model": { $regex: req.params.key } },
+                { "price": { $regex: req.params.key } },
+                { "category": { $regex: req.params.key } }
+
+            ]
+        }
+    );
+
+    res.send(data);
+});
+
 app.listen(4500);
 
 
