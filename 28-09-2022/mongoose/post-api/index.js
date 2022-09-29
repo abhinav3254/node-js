@@ -15,4 +15,9 @@ app.post('/create', async (req, res) => {
     res.send(result);
 });
 
+app.get('/get', async (req, res) => {
+    let result = await product.find();
+    res.send(result);
+})
+
 app.listen(4500);
