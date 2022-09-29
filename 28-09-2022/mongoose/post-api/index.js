@@ -18,6 +18,30 @@ app.post('/create', async (req, res) => {
 app.get('/get', async (req, res) => {
     let result = await product.find();
     res.send(result);
-})
+});
+
+app.put('/update/:name', async (req, res) => {
+    let data = await product.updateOne(
+        req.params,
+        {
+            $set: req.body
+
+        }
+    );
+
+    res.send(data);
+});
+
+app.delete('/delete/:price', async (req, res) => {
+    let data = await product.deleteOne(
+        {
+            price: req.params.price
+        }
+    );
+    res.send(data);
+
+    // console.log(req.params);
+    // res.send('done');
+});
 
 app.listen(4500);
